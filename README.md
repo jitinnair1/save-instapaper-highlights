@@ -20,6 +20,8 @@ pip install -r requirements.txt
 2. Modify the file Credentials.ini with your KEY, SECRET, LOGIN and PASSWORD
 3. Call the app `python downloader.py`
 
-## Credits
+## Based on
 
  This app makes use of [Instapaper API Python wrapper](https://github.com/rsgalloway/instapaper) and is based on [highlightsdownloader](https://github.com/alberto-old/highlightsdownloader)
+ 
+<a href="https://www.buymeacoffee.com/jitinnair" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
