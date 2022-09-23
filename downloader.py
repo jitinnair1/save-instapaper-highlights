@@ -68,12 +68,14 @@ def change_to_highlights_folder():
 
 # Process list of bookmarks
 def process_bookmarks(bookmarks):
-    progress = progressbar.ProgressBar(max_value=len(bookmarks))
+    progress = progressbar.ProgressBar(maxval=len(bookmarks))
     i = 1
+    progress.start()
     for bookmark in bookmarks:
         process_bookmark(bookmark)
         progress.update(i)
         i = i + 1
+    progress.finish()
 
 def get_filename_from_title(title):
     """Generate simpler file name from title
@@ -159,10 +161,12 @@ for folder in folders:
 if os.path.exists("saved_state.txt"):
   os.remove("saved_state.txt")
 
-progress = progressbar.ProgressBar(max_value=len(folders))
+progress = progressbar.ProgressBar(maxval=len(folders))
+progress.start()
 print("Writing Last Saved States:")
 for folder in folders:
     i = 1
     process_saved_state(folder['folder_id'])
     progress.update(i)
     i = i + 1
+progress.finish()
