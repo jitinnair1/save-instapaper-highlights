@@ -68,7 +68,7 @@ def change_to_highlights_folder():
 
 # Process list of bookmarks
 def process_bookmarks(bookmarks):
-    progress = progressbar.ProgressBar(max_value=len(bookmarks))
+    progress = progressbar.ProgressBar(maxval=len(bookmarks)).start()
     i = 1
     for bookmark in bookmarks:
         process_bookmark(bookmark)
@@ -159,7 +159,7 @@ for folder in folders:
 if os.path.exists("saved_state.txt"):
   os.remove("saved_state.txt")
 
-progress = progressbar.ProgressBar(max_value=len(folders))
+progress = progressbar.ProgressBar(maxval=len(folders)).start()
 print("Writing Last Saved States:")
 for folder in folders:
     i = 1
